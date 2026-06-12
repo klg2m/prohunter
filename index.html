@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Mobile Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+
+    <h2 class="title">Hunter Mobile Pro</h2>
+
+    <div class="top-bar">
+        <select id="symbol" class="dropdown">
+            <option value="BTCUSDT">BTC/USDT</option>
+            <option value="ETHUSDT">ETH/USDT</option>
+            <option value="BNBUSDT">BNB/USDT</option>
+            <option value="SOLUSDT">SOL/USDT</option>
+        </select>
+
+        <select id="interval" class="dropdown">
+            <option value="1m">1m</option>
+            <option value="5m" selected>5m</option>
+            <option value="15m">15m</option>
+            <option value="1h">1h</option>
+        </select>
+    </div>
+
+    <div id="chart"></div>
+
+    <section class="card">
+        <h3>وضعیت کلی بازار</h3>
+        <p>روند تایم‌فریم فعلی: <span id="trend-ltf"></span></p>
+        <p>روند تایم‌فریم بالاتر: <span id="trend-htf"></span></p>
+        <p>هم‌جهتی روندها: <span id="trend-align"></span></p>
+        <p>قدرت کلی بازار: <span id="strength"></span></p>
+    </section>
+
+    <section class="card">
+        <h3>سیگنال فعلی</h3>
+        <p>نوع سیگنال: <span id="signal-type"></span></p>
+        <p>کیفیت موقعیت: <span id="signal-quality"></span></p>
+        <p>Impulse: <span id="impulse"></span></p>
+        <p>مومنتوم: <span id="momentum"></span></p>
+    </section>
+
+    <section class="card">
+        <h3>ریسک و نوسان</h3>
+        <p>نوسان لحظه‌ای: <span id="volatility"></span></p>
+        <p>ریسک کندل: <span id="risk"></span></p>
+        <p>نویز: <span id="noise"></span></p>
+    </section>
+
+    <section class="card">
+        <h3>ساختار و زون‌ها</h3>
+        <p>حمایت: <span id="support"></span></p>
+        <p>مقاومت: <span id="resistance"></span></p>
+        <p>موقعیت قیمت: <span id="zone"></span></p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
